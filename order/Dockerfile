@@ -1,7 +1,7 @@
 FROM openjdk:17-jdk-slim-buster
 
-ENV JAR_FILE promotion-0.0.1-SNAPSHOT.jar
-ENV APPLICATION_HOME /srv/promotion
+ENV JAR_FILE order-0.0.1-SNAPSHOT.jar
+ENV APPLICATION_HOME /srv/order
 
 WORKDIR $APPLICATION_HOME
 

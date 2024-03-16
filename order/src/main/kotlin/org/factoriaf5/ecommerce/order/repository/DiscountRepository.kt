@@ -16,7 +16,7 @@ class DiscountRepository {
                 DefaultUriBuilderFactory()
                     .builder()
                     .scheme("http")
-                    .host("localhost")
+                    .host("promotion")
                     .port(8082)
                     .path("promotion")
                     .queryParam("item_id", itemIds)
