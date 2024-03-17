@@ -1,11 +1,12 @@
 FROM openjdk:17-jdk-slim-buster
 
-ENV JAR_FILE order-0.0.1-SNAPSHOT.jar
+RUN apt-get update && apt-get install -y curl
+
+ENV JAR_FILE order.jar
 ENV APPLICATION_HOME /srv/order
 
 WORKDIR $APPLICATION_HOME
 
 COPY build/libs/$JAR_FILE $APPLICATION_HOME/$JAR_FILE
 
-CMD source ./configure_environment.sh; \
-    java -jar $JAR_FILE
+CMD java -jar $JAR_FILE
