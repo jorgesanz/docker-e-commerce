@@ -1,0 +1,5 @@
+promotion:
+  scheme: http
+  host: promotion
+  port: 8082
+  path: promotion
