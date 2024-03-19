@@ -1,0 +1,19 @@
+version: '3.1'
+
+services:
+  promotion:
+    image: jorgesanzb/e-commerce-promotion
+    container_name: promotion
+    ports:
+      - "8082:8082"
+
+  order:
+    image: jorgesanzb/e-commerce-order
+    container_name: order
+    ports:
+      - "8080:8080"
+
+networks:
+  e-commerce-network:
+    external: true
+

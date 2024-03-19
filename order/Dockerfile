@@ -1,7 +1,9 @@
 FROM openjdk:17-jdk-slim-buster
 
-ENV JAR_FILE promotion.jar
-ENV APPLICATION_HOME /srv/promotion
+RUN apt-get update && apt-get install -y curl
+
+ENV JAR_FILE order.jar
+ENV APPLICATION_HOME /srv/order
 
 WORKDIR $APPLICATION_HOME
 
