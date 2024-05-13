@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: order
+  name: promotion
 spec:
   replicas: 3
   selector:
-    app: order
+    app: promotion
   template:
     metadata:
-      name: order
+      name: promotion
       labels:
-        app: order
+        app: promotion
     spec:
       containers:
         - name: promotion
-          image: jorgesanzb/e-commerce-order
+          image: jorgesanzb/e-commerce-promotion
           ports:
-            - containerPort: 8080
+            - containerPort: 8082
