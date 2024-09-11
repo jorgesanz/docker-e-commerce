@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: promotion
-          image: jorgesanzb/e-commerce-promotion
+          image: jorgesanzb/e-commerce-promotion:1.0.0
           ports:
             - containerPort: 8082

@@ -2,14 +2,14 @@ version: '3.1'
 
 services:
   promotion:
-    image: jorgesanzb/e-commerce-promotion
-    container_name: promotion-service
+    image: jorgesanzb/e-commerce-promotion:1.0.0
+    container_name: promotion
     ports:
       - "8082:8082"
 
   order:
-    image: jorgesanzb/e-commerce-order
-    container_name: order-service
+    image: jorgesanzb/e-commerce-order:1.0.0
+    container_name: order
     ports:
       - "8080:8080"
 
