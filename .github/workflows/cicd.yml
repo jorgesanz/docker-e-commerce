@@ -1,0 +1,22 @@
+# Description: an example pipeline for a docker e-commerce application
+# Version 1.0
+name: CICD_PYTHON_ECS
+on:
+  pull_request:
+    branches: [ main, develop, staging ]
+    types:  [  opened, synchronize, reopened, closed ]
+  push:
+    branches: [ main, develop ]
+
+jobs:
+  Init:
+    name: Init
+    runs-on:
+      labels: self-hosted
+
+    steps:
+      - name: 🔽 Checkout Code
+        uses: actions/checkout@v4
+
+      - name: 👋 Hello World
+        run: echo "Hello World"
